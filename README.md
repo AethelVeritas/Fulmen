@@ -1,5 +1,5 @@
 # Spark
-A small low-profile split keyboard.
+A small wireless low-profile split keyboard.
 
 
 
