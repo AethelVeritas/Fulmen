@@ -6,7 +6,7 @@ Created On: 10/08/2025
 ---
 
 ## 10/08/2025
-**Time Spent: **
+**Time Spent: 6h 20m: **
 
 Firstly, I did some research and decided on some constraints/goals:
 1. Must be wireless.
