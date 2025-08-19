@@ -24,7 +24,7 @@ Then, I started messing around with [Ergogen](https://ergogen.ceoloide.com/). I 
 
 Struggled quite a bit with figuring out how to make 3D models of the custom KS33 footprint I used from [this](https://github.com/ceoloide/ergogen-footprints) render properly in KiCAD. Turns out it was all because I used "~/path to file" instead of "/home/username/path to file", so yeah I'm dumb. Had to use a custom 3D model for the KS33 from Grabcad, as Ai03's library only has the hotswap 3d model. And I obviously had to adjust the offset and rotation of both models to make them render properly. I especially struggled with the hotswap 3D model: I'd keep going and changing one individual model in the footprint editor, align it properly, add the offset and rotation values to ergogen, download the PCB and low and behold it wouldn't work. After 2h of messing with this damn problem I gave up. I'll just have to design the case another way or edit the values for every model for every switch model manually, which will be tedious but not impossible. Right now the focus is the PCB, as I can modify the case later as I own a 3D printer.
 After all that crap, I installed [marbastlib](https://github.com/ebastler/marbastlib), which is an amazing library containing a plethora of keyboard related symbols, 3D models, and footprints and then called it a day.
-![image](pics/3D_viewer_misaligned_hotswap.png)
+![image](pics/3Dviewer_misaligned_hotswap.png)
 ![image](pics/footprinteditor_aligned_hotswap.png) 
 
 ## 15/08/2025
