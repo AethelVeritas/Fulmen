@@ -28,10 +28,17 @@ After all that crap, I installed [marbastlib](https://github.com/ebastler/marbas
 ![image](pics/footprinteditor_aligned_hotswap.png) 
 
 ## 15/08/2025
-** Time Spent: 3h 40m **
+**Time Spent: 3h 40m**
+
 While manually assigning schematic references such "SW1" to the switches, I came across what is in my opinion an extremely cool feature: if you double click on a footprint, under the "Update from library button" there is a button called "Change footprint", and clicking that opens up a menu which allows you to change either that specific fooptrint or all footprints of that type from the board with another footprint. This would have been insanely helpful when I designed Quaero, my first PCB keyboard. I made a copy of the standard 1N4148 diode footprint and edited it so that there is a small cutout, slightly larger than the diode itself, right under the diode. After doing so, I used the aforesaid feature to update all of my diodes. I think I saw/heard somewhere about people pressing their THT diodes into the LED cutouts that come with boards to make the whole board more low-profile, and I'm thinking it won't hurt to tryout this idea for myself. Because I'm using hotswap sockets this will not really reduce the height of my board, but well it's a good idea to include the cutouts anyway. 
 ![image](pics/diode_cutouts.png)
 
 I also did part of the routing:
 ![image](pics/routing1.png)
+
+## 19/08/2025
+**Time Spent: 3h **
+Did a lot of cleaning up and double-checking: decided what button to use for the reset and power switches, got the footprints, made them reversibe (kinda), and most importantly troubleshooted the damn MCU. The problem was that the symbol for the MCU (which I got from marbastlib), had the pin assignments descending from 1 to 12 on the left, and then again from the top descending from 13 to 24, while all the reversible footprint I found had the pins descending from the top on the left and then ascending from the bottom on the right. Turns out that it's common practice to do the latter, and not the former. At first I tried to edit the pin assignments of the footprint, only to realise after some time that I can just swap the symbol (yes I'm dumb). Wasted a lot of time on this issue. 
+![image](pics/reversibleMCU.png)
+![image](pics/wrongMCUsymbol.png)
 
