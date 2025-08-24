@@ -1,12 +1,12 @@
 ---
-Title: Spark 
+Title: Fulmen 
 Author: AethelVeritas
 Description: A small wireless low-profile split keyboard.
 Created On: 10/08/2025 
 ---
 
 ## 10/08/2025
-**Time Spent: 6h 20m: **
+**Time Spent: 6h 20m**
 
 Firstly, I did some research and decided on some constraints/goals:
 1. Must be wireless.
@@ -38,7 +38,28 @@ I also did part of the routing:
 
 ## 19/08/2025
 **Time Spent: 3h**
+
 Did a lot of cleaning up and double-checking: decided what button to use for the reset and power switches, got the footprints, made them reversibe (kinda), and most importantly troubleshooted the damn MCU. The problem was that the symbol for the MCU (which I got from marbastlib), had the pin assignments descending from 1 to 12 on the left, and then again from the top descending from 13 to 24, while all the reversible footprint I found had the pins descending from the top on the left and then ascending from the bottom on the right. Turns out that it's common practice to do the latter, and not the former. At first I tried to edit the pin assignments of the footprint, only to realise after some time that I can just swap the symbol (yes I'm dumb). Wasted a lot of time on this issue. 
 ![image](pics/reversibleMCU.png)
 ![image](pics/wrongMCUsymbol.png)
 
+## 21/08/2025
+**Time Spent:**
+Finished routing, and now I've got like 496 errors in the DRC lol. Most of them are from the reversible footprints though: intersecting cutout holes and all that. 
+![image](pics/routing2.png)
+
+Also made the outline. I first made sure everything I needed was on the proper layer (some outlines such as those of the MCU and the switch were on the B.Courtyard layer instead of the proper silkscreen one), and then I exported said layer as a .dxf (using the "Plot" tool) and then imported that into Onshape. Now what I did was I fixed dxf I imported in a sketch, and then added an offset variable and created an offset for the whole thing. Then I selected the stuff I had imported, deleted that, and then exported the resulting outline as .dxf. But I just realized that what I did was extremely stupid: I could have just left the imported .dxf on one sketch, then created a new sketch on top of that, used the former as reference for the outline, and then just exported the sketch containing the outline. 
+
+![image](pics/pcb_outline.png)
+![image](pics/clean_pcb_outline.png) 
+![image](pics/final_pcb_outline.png) 
+
+Added ground fill and mounting holes as well.
+![image](pics/ground_fill.png)
+
+Ok now to deal with silkscreen and graphics and all that. I've decided to rename the whole keyboard "Fulmen" (Latin for lighnting). Should encompass the idea of fast pretty well, plus I can find cooler svgs for that.
+
+![image](pics/final_graphics.png)
+![image](pics/final_graphics3d.png)
+
+I'm honestly surprised my T14 laptop didn't just give up...all of these graphics were demanding as hell on my integrated GPU.  
