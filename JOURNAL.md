@@ -37,7 +37,7 @@ I also did part of the routing:
 ![image](pics/routing1.png)
 
 ## 19/08/2025
-**Time Spent: 3h **
+**Time Spent: 3h**
 Did a lot of cleaning up and double-checking: decided what button to use for the reset and power switches, got the footprints, made them reversibe (kinda), and most importantly troubleshooted the damn MCU. The problem was that the symbol for the MCU (which I got from marbastlib), had the pin assignments descending from 1 to 12 on the left, and then again from the top descending from 13 to 24, while all the reversible footprint I found had the pins descending from the top on the left and then ascending from the bottom on the right. Turns out that it's common practice to do the latter, and not the former. At first I tried to edit the pin assignments of the footprint, only to realise after some time that I can just swap the symbol (yes I'm dumb). Wasted a lot of time on this issue. 
 ![image](pics/reversibleMCU.png)
 ![image](pics/wrongMCUsymbol.png)
