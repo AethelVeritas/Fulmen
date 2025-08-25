@@ -2,7 +2,8 @@
 Title: Fulmen 
 Author: AethelVeritas
 Description: A small wireless low-profile split keyboard.
-Created On: 10/08/2025 
+Created On: 10/08/2025
+Total Time Spent: 26h 
 ---
 
 ## 10/08/2025
@@ -43,8 +44,9 @@ Did a lot of cleaning up and double-checking: decided what button to use for the
 ![image](pics/reversibleMCU.png)
 ![image](pics/wrongMCUsymbol.png)
 
-## 21/08/2025
-**Time Spent:**
+## 24/08/2025
+**Time Spent: 7h**
+
 Finished routing, and now I've got like 496 errors in the DRC lol. Most of them are from the reversible footprints though: intersecting cutout holes and all that. 
 ![image](pics/routing2.png)
 
@@ -62,4 +64,15 @@ Ok now to deal with silkscreen and graphics and all that. I've decided to rename
 ![image](pics/final_graphics.png)
 ![image](pics/final_graphics3d.png)
 
-I'm honestly surprised my T14 laptop didn't just give up...all of these graphics were demanding as hell on my integrated GPU.  
+I'm honestly surprised my T14 laptop didn't just give up...all of these graphics were demanding as hell on my integrated GPU.
+
+## 25/08/2025 
+**Time Spent: 3h 20m**
+
+I spent a lot of time troubleshooting the gerbers: I would upload the zip to jlcpcb and viewer would just get stuck at 96%. After emailing them and finding out that it's because my silkscreen extended beyond the edge.cuts outline (I thought that it would just automatically be ignored/clip), I first tried to somehow remove every silkscreen that's not inside the edge.cuts directly from KiCAD, so I asked around and spent like 2h trying to do that. Then I moved on to inkscape, where I didn't succeed either. Then finally,I said scratch that, let me try with fewer graphics. Turns out that it can extend beyond the edge.cuts, but just not too much, so yeah now I finally have a decent looking end result. 
+
+![image](pics/final_graphics_minimal.png)
+
+I also changed all the references for the default footprints such as the diodes from the silkscreen layer to F.Mask, so that they wouldn't show up on the final board. Didn't know you could edit the properties of multiple items in a selection before, but turns out you can do that by going to the toolbar, then "View", and then enabling the "Properties" panel.
+
+![image](pics/properties_panel.png) 
