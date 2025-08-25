@@ -4,6 +4,7 @@ A small wireless low-profile split keyboard.
 
 
 
+<img width="1141" height="884" alt="jlc_blue" src="https://github.com/user-attachments/assets/fc0e9ce3-b7a4-4d10-a9a6-3fcdab2feee5" />
 
 
 
